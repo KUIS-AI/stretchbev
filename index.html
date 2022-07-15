@@ -1,0 +1,227 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./resources/style.css" media="screen"/>
+
+<html lang="en">
+<head>
+	<title>StretchBEV: Stretching Future Instance Prediction Spatially and Temporally</title>
+    <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/
+        if you update and want to force Facebook to re-scrape. -->
+	<meta property="og:image" content="Path to my teaser.jpg"/>
+	<meta property="og:title" content="StretchBEV: Stretching Future Instance Prediction Spatially and Temporally" />
+	<meta property="og:description" content="Future Instance Segmentation" />
+    <!-- Twitter automatically scrapes this. Go to https://cards-dev.twitter.com/validator?
+        if you update and want to force Twitter to re-scrape. -->
+    <meta property="twitter:card"          content="Future Instance Segmentation" />
+    <meta property="twitter:title"         content="StretchBEV: Stretching Future Instance Prediction Spatially and Temporally" />
+    <meta property="twitter:description"   content="Future Instance Segmentation" />
+    <meta property="twitter:image"         content="Path to my teaser.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Add your Google Analytics tag here -->
+    <script async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-97476543-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-97476543-1');
+    </script>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="title">
+        StretchBEV: Stretching Future Instance Prediction Spatially and Temporally
+    </div>
+
+    <div class="venue">
+        In ECCV 2022
+    </div>
+
+    <br><br>
+
+    <div class="author">
+        <a href="https://kaanakan.github.io" target="_blank">Adil Kaan Akan</a>
+    </div>
+    <div class="author">
+        <a href="https://mysite.ku.edu.tr/fguney/" target="_blank">Fatma Guney</a>
+    </div>
+
+    <br><br>
+
+    <div class="affiliation"><a href="https://ai.ku.edu.tr" target="_blank"> Koc University Is Bank AI Center</a></div>
+    
+
+    <br><br>
+
+    <div class="links"><a href="https://arxiv.org/abs/2108.02760" target="_blank">[Paper]</a></div>
+    <div class="links"><a href="" target="_blank">[Code Coming]</a></div>
+    
+
+    <br><br>
+
+    <div>
+        <div style="width:49.9%;float:left">
+            <p style="font-size:100%;text-align:center;"><b>Images</b></p>
+        </div>
+        <div style="width:16.6%;float:left">
+            <p style="font-size:100%;text-align:center;"><b>Ground Truth</b></p>
+        </div>
+        <div style="width:16.6%;float:left;">
+            <p style="font-size:100%;text-align:center;"><b>FIERY</b></p>
+        </div>
+        <div style="width:16.6%;float:right">
+            <p style="font-size:100%;text-align:center;"><b>StretchBEV-P</b></p>
+        </div>
+        
+        <img style="width: 100%;" src="./comp/2sec_gifs/test_4042_2sec.gif"
+         alt="Results figure"/> 
+         <br><br>
+         <img style="width: 100%;" src="./comp/2sec_gifs/test_923_2sec.gif"
+         alt="Results figure"/> 
+         <br><br>
+
+    </div>
+    <div>
+        <div style="width:49.9%;float:left">
+            <p style="font-size:100%;text-align:center;"><b>Images</b></p>
+        </div>
+        <div style="width:16.6%;float:left">
+            <p style="font-size:100%;text-align:center;"><b>Ground Truth</b></p>
+        </div>
+        <div style="width:16.6%;float:left;">
+            <p style="font-size:100%;text-align:center;"><b>FIERY</b></p>
+        </div>
+        <div style="width:16.6%;float:right">
+            <p style="font-size:100%;text-align:center;"><b>StretchBEV-P</b></p>
+        </div>
+        <img style="width: 100%;" src="./comp/4sec_gifs/test_1203_4sec.gif"
+         alt="Results figure"/> 
+         <br><br>
+         <img style="width: 100%;" src="./comp/4sec_gifs/test_923_4sec.gif"
+         alt="Results figure"/> 
+        
+
+    </div>
+    
+    <br>
+    <br>
+    <p style="width: 80%;text-align:center;">
+        Example comparisons with FIERY. From left to right, we show images, ground truth labels, FIERY predictions and StretchBEV-P predictions. We show examples for short (top 2 examples) and mid settings (bottom 2 examples), 2 and 4 seconds into the future respectively.</a>.
+    </p>
+
+    <br><br>
+    <hr>
+
+    <h1>Abstract</h1>
+    <p style="width: 80%;">
+        In self-driving, predicting future in terms of location and motion of all the agents around the vehicle is a crucial requirement for planning. Recently, a new joint formulation of perception and prediction has emerged by fusing rich sensory information perceived from multiple cameras into a compact bird's-eye view representation to perform prediction. However, the quality of future predictions degrades over time while extending to longer time horizons due to multiple plausible predictions. In this work, we address this inherent uncertainty in future predictions with a stochastic temporal model. Our model learns temporal dynamics in a latent space through stochastic residual updates at each time step. By sampling from a learned distribution at each time step, we obtain more diverse future predictions that are also more accurate compared to previous work, especially stretching both spatially further regions in the scene and temporally over longer time horizons. Despite separate processing of each time step, our model is still efficient through decoupling of the learning of dynamics and the generation of future predictions.
+    </p>
+
+    <br><br>
+    <hr>
+
+    <!-- <h1>Video</h1>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </div>
+
+    <br><br>
+    <hr> -->
+
+    <h1>Method Overview</h1>
+    <img style="width: 80%;" src="./resources/method.png"
+         alt="Method overview figure"/>
+    <br><br>
+    <p style="width: 80%;">
+        This figure shows the inference procedure of our model StretchBEV. We start with the first $k=3$ conditioning frames where we sample the stochastic latent variables from the posterior distribution~(purple). On the right, we show the prediction at a step $t$ after the conditioning frames where we sample from the learned future distribution~(red). The dashed vertical line marks the conditioning frames.
+    </p>
+    <br>
+    <a class="links" href="" target="_blank">[Code Coming]</a>
+
+    <br><br>
+    <hr>
+
+    <h1>Sample Comparisons</h1>
+    <p style="font-size:100%;text-align:center;"> In this section, we provide additional qualitative examples where we show samples that are generated by FIERY and StretchBEV-P.
+        </p>
+
+    <div>
+        <div style="width:49%;float:left;">
+            <p style="font-size:100%;text-align:center;"><b>FIERY</b></p>
+        </div>
+        <div style="width:49%;float:right">
+            <p style="font-size:100%;text-align:center;"><b>StretchBEV-P</b></p>
+        </div>
+        <img style="width: 49%;" src="./samples/samples_gifs_2sec/fiery_test_1162.gif"
+         alt="Results figure"/> 
+         <img style="width: 49%;" src="./samples/samples_gifs_2sec/label_test_1162.gif"
+         alt="Results figure"/>
+         <img style="width: 49%;margin:0px; padding:0px;" src="./samples/samples_gifs_2sec/fiery_test_2614.gif"
+         alt="Results figure"/> 
+         <img style="width: 49%;margin:0px; padding:0px;" src="./samples/samples_gifs_2sec/label_test_2614.gif"
+         alt="Results figure"/> 
+         <img style="width: 49%;" src="./samples/samples_gifs_2sec/fiery_test_3353.gif"
+         alt="Results figure"/> 
+         <img style="width: 49%;" src="./samples/samples_gifs_2sec/label_test_3353.gif"
+         alt="Results figure"/> 
+         <br><br>
+
+    </div>
+    
+
+    <br><br>
+    <hr>
+
+    <h1>Evaluation over Different Temporal Horizons</h1>
+    <img style="width: 80%;" src="./resources/time_horizon.jpeg"
+         alt="Results figure"/> 
+         <br><br>
+    <p style="width: 80%;">
+        We plot the performance of our models StretchBEV and StretchBEV-P in comparison to FIERY over a range of temporal horizons from 1 second to 8 seconds in terms of IoU <b>(left)</b> and VPQ <b>(right)</b> for spatially far <b>(solid)</b> and near <b>(dashed)</b> regions separately. The vertical dashed line marks the training horizon. That is, we train all the models to predict 2 seconds into the future and simply change the evaluation setting to predict more time steps.
+
+    </p>
+    <br><br>
+    <hr>
+
+    <h1>Paper</h1>
+    <div class="paper-thumbnail">
+        <a href="https://arxiv.org">
+            <img class="layered-paper-big" width="100%" src="./resources/paper.png" alt="Paper thumbnail"/>
+        </a>
+    </div>
+    <div class="paper-info"style="width: 50%;">
+        <h3>StretchBEV: Stretching Future Instance Prediction Spatially and Temporally</h3>
+        <p>Adil Kaan Akan and Fatma Guney</p>
+        <p>In ECCV, 2022.</p>
+        <pre><code>@InProceedings{Akan2021ECCV,
+    author    = {Akan, Adil Kaan and Guney, Fatma},
+    title = {StretchBEV: Stretching Future Instance Prediction Spatially and Temporally},
+    booktitle = {European Conference on Computer Vision (ECCV)},
+    year = {2022},
+}
+}</code></pre>
+    </div>
+
+    <br><br>
+    <hr>
+
+    <h1>Acknowledgements</h1>
+    <p style="width: 80%;">
+        Kaan Akan was supported by KUIS AI Center fellowship, Fatma Güney by TUBITAK 2232 International Fellowship for Outstanding Researchers Programme.</a>.
+    </p>
+
+    <br><br>
+</div>
+
+</body>
+
+</html>
